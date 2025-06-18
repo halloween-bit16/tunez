@@ -10,3 +10,4 @@ function FloatingEmojis() {
   );
 }
 
+export default FloatingEmojis;
