@@ -20,6 +20,14 @@ function Home() {
           <h3 className="text-white text-xl md:text-lg sm:text-base my-4">
             Find tunes that match your vibe.
           </h3>
+          <div className="text-center mt-6">
+  <button
+    onClick={() => window.location.href = "#explore"}
+    className="px-6 py-3 bg-white text-purple-800 font-semibold rounded-full shadow-lg hover:bg-purple-200 transition duration-300"
+  >
+    Explore
+  </button>
+</div>
         </div>
       </section>
 
