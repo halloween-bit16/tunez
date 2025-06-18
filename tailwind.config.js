@@ -5,22 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-   extend: {
-  fontFamily: {
-    desi: ['"Teko"', 'sans-serif']
-  }
-}
-  },
-  plugins: [],
-}
-
-module.exports = {
-  theme: {
     extend: {
+      fontFamily: {
+        desi: ['"Teko"', 'sans-serif'],
+      },
       animation: {
         'spin-slow': 'spin 4s linear infinite',
       },
     },
   },
-  plugins: [],
-};
+  plugins: [],
+}
