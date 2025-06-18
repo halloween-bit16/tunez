@@ -4,12 +4,12 @@ import Card from "../components/Card";
 import img1 from '../assets/898ac0966581ad055d794ec0701a1bab.jpg'
 import img2 from '../assets/953f41731ccf5c84bf4e28a844b8ae78.jpg'
 import img3 from '../assets/eded77bb9363a7d374c01ed96adb7f8b.jpg'
-import FloatingEmojis from '../components/FloatingEmojis'
+
 
 function Home() {
   return (
     <>
-    <FloatingEmojis></FloatingEmojis>
+    
       <section className="bg-gradient-to-bl from-purple-900 via-blue-800 via-indigo-800 to-black min-h-screen">
         <NavBar />
 
