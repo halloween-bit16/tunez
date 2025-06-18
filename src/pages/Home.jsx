@@ -13,22 +13,23 @@ function Home() {
       <section className="bg-gradient-to-bl from-purple-900 via-blue-800 via-indigo-800 to-black min-h-screen">
         <NavBar />
 
-        <div className="flex flex-col justify-center items-center text-center h-[70vh] sm:h-[60vh]">
-          <h1 className="text-white text-5xl md:text-4xl sm:text-3xl font-bold mb-2">
-            Music. Magic.
-          </h1>
-          <h3 className="text-white text-xl md:text-lg sm:text-base my-4">
-            Find tunes that match your vibe.
-          </h3>
-          <div className="text-center mt-6">
-  <button
-    onClick={() => window.location.href = "#explore"}
-    className="px-6 py-3 bg-white text-purple-800 font-semibold rounded-full shadow-lg hover:bg-purple-200 transition duration-300"
-  >
-    Explore
-  </button>
+        <div className="flex flex-col justify-center items-center text-center h-screen">
+  <h1 className="text-white text-5xl md:text-4xl sm:text-3xl font-bold mb-2">
+    Music. Magic.
+  </h1>
+  <h3 className="text-white text-xl md:text-lg sm:text-base my-4">
+    Find tunes that match your vibe.
+  </h3>
+  <div className="text-center mt-6">
+    <button
+      onClick={() => window.location.href = "#explore"}
+      className="px-6 py-3 bg-white text-purple-800 font-semibold rounded-full shadow-lg hover:bg-purple-200 transition duration-300"
+    >
+      Explore
+    </button>
+  </div>
 </div>
-        </div>
+
       </section>
 
       <section className="bg-gray-950 py-10">
