@@ -1,6 +1,7 @@
 import Footer from "./Footer";
 import NavBar from "./NavBar";
-import { Instagram, Twitter, Spotify } from 'lucide-react';
+import { Instagram, Twitter, Disc } from 'lucide-react';
+
 
 function Contact() {
   return (
@@ -43,7 +44,7 @@ function Contact() {
             <Twitter />
           </a>
           <a href="https://spotify.com" target="_blank" rel="noreferrer">
-            <Spotify />
+            <Disc />
           </a>
         </div>
       </section>
