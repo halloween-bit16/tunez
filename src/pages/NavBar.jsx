@@ -21,7 +21,6 @@ function NavBar() {
   <span class="text-2xl animate-spin-slow">📀</span>
   <h1 class="text-white text-xl font-bold">Tunez</h1>
 </div>
-        Tunez
       </h1>
 
       {/* Desktop Nav */}
