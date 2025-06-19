@@ -4,9 +4,14 @@ import Card from "../components/Card";
 import img1 from '../assets/898ac0966581ad055d794ec0701a1bab.jpg'
 import img2 from '../assets/953f41731ccf5c84bf4e28a844b8ae78.jpg'
 import img3 from '../assets/eded77bb9363a7d374c01ed96adb7f8b.jpg'
-
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+
+  const navigate = useNavigate();
+
+  const handleExplore = () => navigate('/explore');
+
   return (
     <>
     
@@ -22,7 +27,7 @@ function Home() {
   </h3>
   <div className="text-center mt-6">
     <button
-      onClick={() => window.location.href = "#explore"}
+      onClick={handleExplore}
       className="px-6 py-3 bg-white text-purple-800 font-semibold rounded-full shadow-lg hover:bg-purple-200 transition duration-300"
     >
       Explore

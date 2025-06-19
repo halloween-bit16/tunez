@@ -1,15 +1,15 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from 'lucide-react';  // lucide icons for clean hamburger icon
+import Explore from './Explore.jsx';
 
 function NavBar() {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const handleHome = () => navigate('/');
-  const handleAlbumns = () => navigate('/albumns');
   const handleContact = () => navigate('/contact');
-  const handleSingles = () => navigate('/singles');
+  const handleExplore = () => navigate('/explore');
 
   return (
     <nav className="bg-transparent text-white px-6 py-4 flex justify-between items-center">
@@ -25,8 +25,7 @@ function NavBar() {
 
       {/* Desktop Nav */}
       <div className="hidden md:flex space-x-6">
-        <h3 className="hover:text-gray-400 cursor-pointer" onClick={handleAlbumns}>Albums</h3>
-        <h3 className="hover:text-gray-400 cursor-pointer" onClick={handleSingles}>Singles</h3>
+        <h3 className="hover:text-gray-400 cursor-pointer" onClick={handleExplore}>Explore</h3>
         <h3 className="hover:text-gray-400 cursor-pointer" onClick={handleContact}>Contact</h3>
       </div>
 
@@ -40,8 +39,7 @@ function NavBar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="absolute top-16 right-6 bg-black bg-opacity-80 rounded-lg p-4 space-y-4 text-right z-10">
-          <h3 className="hover:text-gray-400 cursor-pointer" onClick={() => {handleAlbumns(); setIsOpen(false);}}>Albums</h3>
-          <h3 className="hover:text-gray-400 cursor-pointer" onClick={() => {handleSingles(); setIsOpen(false);}}>Singles</h3>
+          <h3 className="hover:text-gray-400 cursor-pointer" onClick={() => {handleExplore(); setIsOpen(false);}}>Explore</h3>
           <h3 className="hover:text-gray-400 cursor-pointer" onClick={() => {handleContact(); setIsOpen(false);}}>Contact</h3>
         </div>
       )}

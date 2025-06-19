@@ -1,6 +1,5 @@
-
-function Card({ title, desp, image }){
-    return (
+function Card({ title, desp, image }) {
+  return (
     <div className="bg-white rounded-xl shadow-md overflow-hidden hover:scale-105 transition-transform duration-300">
       {image && (
         <img src={image} alt={title} className="w-full h-48 object-cover" />
@@ -12,4 +11,4 @@ function Card({ title, desp, image }){
     </div>
   );
 }
-export default Card
+export default Card;
