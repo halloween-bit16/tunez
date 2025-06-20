@@ -1,51 +1,92 @@
-import Footer from "./Footer";
+import { useState } from "react";
 import NavBar from "./NavBar";
-import { Instagram, Twitter, Disc } from 'lucide-react';
-
+import Footer from "./Footer";
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Thanks for contacting us!");
+    setFormData({ name: "", email: "", message: "" });
+  };
+
   return (
     <>
       <section className="bg-gradient-to-b from-indigo-800 to-black min-h-screen">
         <NavBar />
 
-        <div className="text-center text-white py-10">
-          <h1 className="text-4xl md:text-3xl font-bold mb-2">Get in Touch</h1>
-          <p className="text-lg md:text-base text-gray-300">Have a query, request or feedback? We’d love to hear from you.</p>
-        </div>
+        <div className="max-w-xl mx-auto text-white py-16 px-6 animate-fadeInUp">
+          <h1 className="text-3xl font-bold mb-6 text-center">Contact Us</h1>
+          <p className="text-gray-300 mb-8 text-center">
+            Have a suggestion, feedback or a track we should know about? Drop us a message!
+          </p>
 
-        <form className="max-w-xl mx-auto p-6 bg-gray-900 rounded-lg shadow-lg space-y-4 text-white">
-          <div>
-            <label className="block mb-1">Name</label>
-            <input type="text" className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-indigo-500" placeholder="Your Name" />
-          </div>
-          <div>
-            <label className="block mb-1">Email</label>
-            <input type="email" className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-indigo-500" placeholder="you@example.com" />
-          </div>
-          <div>
-            <label className="block mb-1">Message</label>
-            <textarea rows="4" className="w-full p-2 rounded bg-gray-800 border border-gray-700 focus:ring-2 focus:ring-indigo-500" placeholder="Your message..."></textarea>
-          </div>
-          <button type="submit" className="bg-indigo-600 hover:bg-indigo-700 px-4 py-2 rounded font-semibold">Send</button>
-        </form>
+          <form
+            onSubmit={handleSubmit}
+            className="bg-gray-900 p-6 rounded-lg shadow-lg space-y-5"
+          >
+            <div>
+              <label htmlFor="name" className="block mb-2 font-medium">
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full px-3 py-2 rounded bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
 
-        <div className="text-center text-gray-300 mt-6">
-          <p>Email: support@tunez.com</p>
-          <p>Phone: +91 9876543210</p>
-          <p>Based in: Bengaluru, India</p>
-        </div>
+            <div>
+              <label htmlFor="email" className="block mb-2 font-medium">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-3 py-2 rounded bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              />
+            </div>
 
-        <div className="text-center text-white mt-8 flex justify-center space-x-8">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
-            <Instagram />
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noreferrer">
-            <Twitter />
-          </a>
-          <a href="https://spotify.com" target="_blank" rel="noreferrer">
-            <Disc />
-          </a>
+            <div>
+              <label htmlFor="message" className="block mb-2 font-medium">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                rows="4"
+                required
+                className="w-full px-3 py-2 rounded bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-indigo-600 hover:bg-indigo-700 transition duration-300 text-white py-2 rounded"
+            >
+              Send Message
+            </button>
+          </form>
         </div>
       </section>
 

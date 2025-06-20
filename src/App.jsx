@@ -1,22 +1,23 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
-import Home from './pages/Home';
-import Contact from './pages/Contact';
-import Explore from './pages/Explore';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Explore from "./pages/Explore";
+import SongDetails from "./pages/SongDetails";
+import Favourites from "./pages/Favourites";
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
-function App(){
-  return(
-    <>
-    <Router>
+function App() {
+  return (
+    <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home></Home>}></Route>
-        <Route path='/explore' element={<Explore></Explore>}></Route>
-        <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/explore" element={<Explore />} />
+        <Route path="/song/:id" element={<SongDetails />} />
+        <Route path="/favourites" element={<Favourites />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/song/:id" element={<SongDetails />} />
       </Routes>
-    </Router>
-    </>
+    </BrowserRouter>
   );
 }
 
-export default App
+export default App;

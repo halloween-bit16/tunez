@@ -1,4 +1,3 @@
-
 function Footer() {
   return (
     <div className="bg-black text-white text-center py-4">
@@ -6,4 +5,5 @@ function Footer() {
     </div>
   );
 }
-export default Footer
+
+export default Footer;
