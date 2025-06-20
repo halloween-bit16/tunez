@@ -119,9 +119,9 @@ function Explore() {
               {filteredSongs.length > 0 ? (
                 filteredSongs.map((song) => (
                   <div
-                    key={song.id}
+                    key={song.id} 
                     onClick={() => setSelectedSong(song)}
-                    className="cursor-pointer"
+                    className="cursor-pointer animate-fadeInUp"
                   >
                     <Cards
                       title={song.name}

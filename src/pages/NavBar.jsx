@@ -24,7 +24,7 @@ function NavBar() {
           to="/favourites"
           className="text-gray-300 hover:text-indigo-400 transition duration-300 font-medium"
         >
-          My Favourites
+          Favourites
         </Link>
         <Link
           to="/contact"
