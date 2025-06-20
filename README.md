@@ -10,6 +10,9 @@ Welcome to Tunez - your one stop place where **magic** happens
 /src <br>
 ┣ /assets <br>
 ┣ /components <br>
+┣ /context <br>
+┣ /data <br>
+┣ /hooks <br>
 ┣ /pages <br>
 ┣ App.jsx <br>
 ┗ main.jsx
