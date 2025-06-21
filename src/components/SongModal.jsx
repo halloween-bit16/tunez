@@ -46,7 +46,6 @@ function SongModal({ song, onClose }) {
             </p>
 
             <div className="flex gap-4 mt-4 items-center">
-              {/* FAV Button */}
               <button
                 onClick={() => toggleFavourite(song.id)}
                 className={`text-2xl transition ${
@@ -56,7 +55,6 @@ function SongModal({ song, onClose }) {
                 {isFav ? "❤️" : "🤍"}
               </button>
 
-              {/* Preview */}
               <button
                 onClick={() =>
                   alert("This would open a story-style preview in the app 🔊")
@@ -66,7 +64,6 @@ function SongModal({ song, onClose }) {
                 Preview
               </button>
 
-              {/* Spotify Link */}
               {song.url ? (
                 <a
                   href={song.url}
