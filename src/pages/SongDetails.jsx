@@ -64,7 +64,6 @@ function SongDetails() {
               </p>
 
               <div className="flex gap-4">
-                {/* Favorite button */}
                 <button
                   onClick={toggleFavorite}
                   className={`text-2xl transition ${
@@ -74,7 +73,6 @@ function SongDetails() {
                   {isFavorite ? "❤" : "🤍"}
                 </button>
 
-                {/* Preview button */}
                 <button
                   onClick={() =>
                     alert("This would open a story-style preview in the app 🔊")
@@ -84,7 +82,6 @@ function SongDetails() {
                   Preview
                 </button>
 
-                {/* Spotify button */}
                 {song.url ? (
                   <a
                     href={song.url}
