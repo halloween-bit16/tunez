@@ -7,10 +7,9 @@ function Cards({ title, desp, image, language, genre, songId }) {
 
   return (
     <div className="bg-gray-900 rounded-lg overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 cursor-pointer relative group">
-      {/* ❤️ Favourite Button */}
       <button
         onClick={(e) => {
-          e.stopPropagation(); // Prevent triggering modal
+          e.stopPropagation();
           toggleFavourite(songId);
         }}
         className={`absolute top-3 right-3 text-2xl transition-transform duration-200 z-10 ${
@@ -20,7 +19,6 @@ function Cards({ title, desp, image, language, genre, songId }) {
         {isFav ? "❤️" : "🤍"}
       </button>
 
-      {/* Card Content */}
       <img
         src={image}
         alt={title}

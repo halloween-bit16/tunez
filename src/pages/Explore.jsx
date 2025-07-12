@@ -129,7 +129,7 @@ function Explore() {
                       image={song.image}
                       language={song.language}
                       genre={song.genre}
-                      songId={song.id} // ✅ this enables the ❤️
+                      songId={song.id}
                     />
                   </div>
                 ))

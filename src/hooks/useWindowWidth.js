@@ -8,7 +8,6 @@ export default function useWindowWidth() {
 
     window.addEventListener("resize", handleResize);
 
-    // Clean up listener on unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
