@@ -1,11 +1,20 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Explore from "./pages/Explore";
-import SongDetails from "./pages/SongDetails";
-import Favourites from "./pages/Favourites";
-import Home from "./pages/Home";
-import Contact from "./pages/Contact";
+import Explore from "./frontend/pages/Explore";
+import SongDetails from "./frontend/pages/SongDetails";
+import Favourites from "./frontend/pages/Favourites";
+import Home from "./frontend/pages/Home";
+import Contact from "./frontend/pages/Contact";
+import React, { useEffect } from 'react';
+
 
 function App() {
+
+  useEffect(() => {
+  fetch('http://localhost:5000/')
+    .then(res => res.text())
+    .then(data => console.log(data));
+}, []);
+
   return (
     <BrowserRouter>
       <Routes>
