@@ -1,7 +1,6 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import { useState } from "react";
-import { FavouritesContext } from "../context/FavouritesContext";
 import Cards from "../components/Cards";
 import allSongs from "../data/songs";
 import SongModal from "../components/SongModal";
